@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+        
+	<title>Stop watch</title>
+</head>
+<body>
+
+	    <nav class="nav bg-success m-5">
+	    	<a href="#" class="nav-link text-white font-weight-bold h1">Stop watch</a>
+	    </nav>
+
+
+	     <div class="container">
+	     	  <div class="row">
+	     	  	 <div class="col-md-6 m-auto">
+	     	  	 	  <div class="card">
+	     	  	 	  	 <div class="card-header bg-primary text-white text-center">
+	     	  	 	  	 	  <h1 class="font-weight-bold">Stop Watch</h1>
+	     	  	 	  	 </div>
+	     	  	 	  	 <div class="card-body  text-center">
+	     	  	 	  	 	  <h1 class=" display-2">
+	     	  	 	  	 	  	<span id="minutes">00</span>:
+	     	  	 	  	 	    <span id="seconds">00</span>:
+	     	  	 	  	 	    <span id="m-seconds">00</span>
+	     	  	 	  	 	  </h1>
+	     	  	 	  	 	  <button class="btn btn-success" id="start-btn">Start</button>
+	     	  	 	  	 	  <button class="btn btn-danger" id="stop-btn">Stop</button>
+	     	  	 	  	 	  <button class="btn btn-warning" id="reset-btn">Reset</button>
+	     	  	 	  	 </div>
+	     	  	 	  </div>
+	     	  	 </div>
+	     	  </div>
+	     </div>
+
+	   
+<script type="text/javascript">
+
+			let count = 0;
+			let minutes = 0;
+			let seconds = 0;
+			let milliSeconds = 0;
+			let key = 0;
+			let timerRunning = false;
+
+			let startTimer = function () {
+				 count++;
+
+				 minutes = Math.floor((count/100)/60);
+				 seconds = Math.floor((count/100) - (minutes * 60));
+				 milliSeconds = Math.floor(count - (seconds * 100) - (minutes * 6000));
+
+				 document.querySelector('#minutes').innerText = leadigZero(minutes);
+
+				 document.querySelector('#seconds').innerText = leadigZero(seconds);
+
+				 document.querySelector('#m-seconds').innerText = leadigZero(milliSeconds);
+
+			};
+
+			// start btn...............
+	   
+      let startButton = document.querySelector('#start-btn');
+
+      startButton.addEventListener('click',function () {
+      	 if (!timerRunning) {
+      	 	 key = setInterval(startTimer, 10); //start timer..
+      	 	 timerRunning = true;
+      	 };
+      	  
+      });
+
+
+      //stop btn........................
+
+       let stopBtn = document.querySelector('#stop-btn');
+
+        stopBtn.addEventListener('click',function () {
+        	  
+        	  clearInterval(key); //stop timer..
+        });
+
+
+        //Reset btn.........................
+
+        let resetBtn = document.querySelector('#reset-btn');
+
+        resetBtn.addEventListener('click', function () {
+        	  clearInterval(key); //stop timer..
+        	    count = 0;
+			        minutes = 0;
+			        seconds = 0;
+			        milliSeconds = 0;
+			        key = 0;
+			        timerRunning = false;
+
+			        document.querySelector('#minutes').innerText = '00';
+
+				      document.querySelector('#seconds').innerText = '00';
+
+				        document.querySelector('#m-seconds').innerText = '00';
+        });
+
+
+      let leadigZero = function (time) {
+      	 
+      	 if (time <= 9) {
+      	 	return "0" + time;
+
+      	 }else{
+      	 	return time;
+      	 };
+      };
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Dom manupulation</title>
+</head>
+<body>
+       <nav>
+          <a href="#">Dom manupulation</a>
+       </nav>
+
+       <div>
+          <h1 id="msg"></h1>
+          <button id="btn1" onclick=" morning()">Good morning</button>
+          <button id="btn2" onclick="Afternoon()">Good Afternoon</button>
+          <button id="btn3" onclick="Evening() ">Good Evening</button>
+          <button id="btn4" onclick="Night()">Good Night</button>
+          <button id="btn5" onclick="clr()">Clear</button>
+       </div>
+
+
+
+
+
+    <script>
+        let nav = document.querySelector('nav');
+
+        nav.style.backgroundColor ="green";
+        nav.style.padding = "20px";
+        nav.style.textAlign ="center";
+
+        let a = document.querySelector("nav a");
+
+        a.style.color = "white";
+        a.style.textDecoration = "none";
+        a.style.fontSize ="40px";
+        
+    /*------------------------------------------------*/   
+
+        
+     
+        let div = document.querySelector('div');
+
+          div.style.height = "300px";
+          div.style.width = "400px";
+          div.style.border = "2px solid black";
+          div.style.margin = "auto";
+          div.style.marginTop ="100px";
+          div.style.padding ="10px";
+          div.style.borderRadius = '20px';
+         
+
+        let btn1=document.getElementById('btn1')
+
+          btn1.style.backgroundColor = "green";
+          btn1.style.fontSize = "20px";
+          btn1.style.color = "white";
+
+        let btn2=document.getElementById('btn2');
+           
+          btn2.style.backgroundColor = "green";
+          btn2.style.fontSize = "20px";
+          btn2.style.color = "white";
+
+        let btn3=document.getElementById('btn3');
+           
+           btn3.style.backgroundColor = "green";
+           btn3.style.fontSize = "20px";
+           btn3.style.color = "white";
+
+        let btn4=document.getElementById('btn4');
+           
+           btn4.style.backgroundColor = "green";
+           btn4.style.fontSize = "20px";
+           btn4.style.color = "white";
+           btn4.style.margin = "5px";
+
+        let btn5 = document.getElementById('btn5');
+           
+           btn5.style.backgroundColor = "green";
+           btn5.style.fontSize = "20px";
+           btn5.style.color = "white";
+           btn5.style.margin = "5px";
+
+        /*-----------------------------------------*/
+          let output = document.getElementById('msg');
+            output.style.height = '30px';
+            output.style.width = '80%';
+            output.style.backgroundColor = '#dde1e6';
+            output.style.margin = 'auto';
+            output.style.padding = '20px';
+            output.style.marginBottom = '15px';
+            output.style.borderRadius = '15px';
+            output.style.boxShadow = '0 0 15px black';
+
+          function morning() {
+             let h1 = document.getElementById('msg');
+                h1.innerText = "Good Morning";
+                h1.style.backgroundColor = 'green';
+                h1.style.color = 'white';
+          }
+
+          function Afternoon() {
+            let h1 = document.getElementById('msg');
+                h1.innerText = "Good Afternoon";
+                h1.style.backgroundColor = 'orange';
+                h1.style.color = 'white';
+          }
+
+          function Evening() {
+            let h1 = document.getElementById('msg');
+                h1.innerText = "Good Evening";
+                h1.style.backgroundColor = '#46536f';
+                h1.style.color = 'white';
+          }
+
+          function Night() {
+            let h1 = document.getElementById('msg');
+                h1.innerText = "Good Night";
+                h1.style.backgroundColor = 'black';
+                h1.style.color = 'white';
+          }
+
+          function clr() {
+            let h1 = document.getElementById('msg');
+                h1.innerText = " ";
+                h1.style.backgroundColor = '#dde1e6';
+          }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+        
+	<title>Math Table</title>
+</head>
+<body>
+
+	    <nav class="nav bg-success m-5">
+	    	<a href="#" class="nav-link text-white font-weight-bold h1">Math Table</a>
+	    </nav>
+
+	    <div class="container">
+	    	 <div class="card">
+	    	 	  <div class="card-header">
+	    	 	  	  <h1 class="bg-primary font-weight-bold text-white">Multiplication Table</h1>
+	    	 	  	 <div class="card-body">
+	    	 	  	 	    <div class="row">
+	    	 	  	 	    	<div class="col-md-5">
+	    	 	  	 	    		<div class="form-group">
+	    	 	  	 	    			 <label>Enter a number </label>
+	    	 	  	 	    			 <input type="number" name="#" class="form-control" id="req-number">
+	    	 	  	 	    		</div>
+	    	 	  	 	    	</div>
+	    	 	  	 	    	<div class="col-md-7">
+	    	 	  	 	    		<div class="form-group">
+	    	 	  	 	    			<label>Multiplier Range</label>
+	    	 	  	 	    			<input type="range" name="#" class="form-control" min="1" 
+	    	 	  	 	    			 max="10" value="1" id="multiplier">
+	    	 	  	 	    		</div>
+	    	 	  	 	    	</div>
+	    	 	  	 	    </div>
+	    	 	  	 	  <div class="card-footer">
+	    	 	  	 	  	<div class="row">
+	    	 	  	 	  		<div class="col-md-2">
+	    	 	  	 	  			 <h1 class="display-3">
+	    	 	  	 	  			 	  <span class="badge badge-primary" id="number">1</span>
+	    	 	  	 	  			 </h1>
+	    	 	  	 	  		</div>
+	    	 	  	 	  		<div class="col-md-2">
+	    	 	  	 	  			 <h1 class="display-3">
+	    	 	  	 	  			 	<span class="badge badge-primary">X</span>
+	    	 	  	 	  			 </h1>
+	    	 	  	 	  		</div>
+	    	 	  	 	  		<div class="col-md-2">
+	    	 	  	 	  			<h1 class="display-3">
+	    	 	  	 	  				<span class="badge badge-primary" id="multi">1</span>
+	    	 	  	 	  			</h1>
+	    	 	  	 	  		</div>
+	    	 	  	 	  		<div class="col-md-2">
+	    	 	  	 	  			<h1 class="display-3">
+	    	 	  	 	  				<span class="badge badge-primary">=</span>
+	    	 	  	 	  			</h1>
+	    	 	  	 	  		</div>
+	    	 	  	 	  		<div class="col-md-2">
+	    	 	  	 	  			<h1 class="display-3">
+	    	 	  	 	  				<span class="badge badge-primary" id="result">1</span>
+	    	 	  	 	  			</h1>
+	    	 	  	 	  		</div>
+	    	 	  	 	  	</div>
+	    	 	  	 	  </div>
+	    	 	  	 </div>
+	    	 	  </div>
+	    	 </div>
+	    </div>
+
+<script type="text/javascript">
+	   
+	   let numberEl = document.querySelector('#req-number');
+
+
+	   numberEl.addEventListener('keyup',function () {
+	   	   	let thenumber = Number(numberEl.value);
+
+	   	   document.querySelector('#number').innerText = thenumber;
+
+	   	   calculate();
+
+	   });
+
+
+
+	   let rangeEl = document.querySelector('#multiplier');
+
+
+
+	   rangeEl.addEventListener('input', function () {
+	   	    
+	   	    let selectedMultiplier = Number(rangeEl.value);
+
+	   	     document.querySelector('#multi').innerText = selectedMultiplier;
+
+	   	    calculate();
+	   });
+
+
+	     //let result = document.querySelector('#result');
+
+
+	     let calculate = function(){
+
+	     	    let numInput = Number(document.querySelector('#number').innerText);
+
+	     	    let numRanging = Number(document.querySelector('#multi').innerText);
+
+	     	    let math = numInput * numRanging;
+
+	     	     document.querySelector('#result').innerText = math;
+	     };
+		
+
+</script>
+
+</body>
+</html>

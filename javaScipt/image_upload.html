@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+        
+	<title>image upload</title>
+
+	<style type="text/css">
+		
+
+	</style>
+</head>
+<body>
+
+	    <nav class="nav bg-success m-5">
+	    	<a href="#" class="nav-link text-white font-weight-bold h1">image upload</a>
+	    </nav>
+
+
+       <div class="container">
+       	<div class="row">
+       		<div class="col-md-6">
+       			<div class="card">
+       				<div class="card-header bg-primary text-white text-center">
+       					<h1 class="font-weight-bold">image upload</h1>
+       				</div>
+       				<div class="card-body">
+       					<form id="upload-form" enctype="multipart/form-data">
+       						<div class="custom-file">
+       							<input type="file" name="#" class="custom-file-input" id="customFile">
+       							<label class="custom-file-label" for="customFile">Choose file</label>
+       						</div>
+       						<div class="mt-3">
+       							<input type="submit" name="" value="upload" class="btn btn-success">
+       							<button class="btn btn-danger btn-sm" id="remove-btn">Remove all</button>
+       						</div>
+       					</form>
+       				</div>
+       			</div>
+       		</div>
+       	</div>
+       </div>
+
+       <div class="container">
+       	<div class="row card-row">
+       		
+       	</div>
+       </div>
+	    
+
+
+
+
+<script type="text/javascript">
+	   
+	   let uploadForm = document.querySelector('#upload-form');
+
+	   uploadForm.addEventListener('submit', function () {
+	   	  let imageFile = document.querySelector('#customFile').files[0];
+	   	  let imageName = imageFile.name;
+
+	   	  let reader = new FileReader();
+
+	   	  reader.readAsDataURL(imageFile);
+
+	   	  reader.addEventListener('load', function () {
+	   	  	   if (this.result && localStorage) {
+	   	  	   	let imagesList = localStorage.getItem('images')
+	   	  	   	 ? JSON.parse(localStorage.getItem('images')) : [];
+
+	   	  	   		imagesList.push(this.result);
+
+	   	  	   		localStorage.setItem('images',JSON.Stringify(imagesList));
+	   	  	   }
+	   	  })
+
+	   });
+
+	   let displayImage = () =>{
+	   		let imagesList = localStorage.getItem('images') ? JSON.parse(localStorage.getItem('images')) : [];
+
+	   		if (imagesList.length !==0) {
+	   			let cardImage = " ";
+	   			for(let image of imagesList){
+	   				cardImage += `<div class="col-md-3 my-3">
+       			           <div class="card bg-light-purple" style="box-shadow: 0 0 10px black;">
+       				           <img src="${image}" alt=" " class="img-fluid">
+       				          <div class="card-body">
+       				            <h3 class="card-title">image</h3>
+       					          <p class="card-text">Lorem sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.</p>
+       			            </div>
+       			          </div>
+       		          </div>`;
+
+	   			       }
+	   			       document.querySelector('#card-row').innerHTML = cardImage;
+	   		    }
+	   };
+
+	   displayImage();
+	
+</script>
+
+</body>
+</html>

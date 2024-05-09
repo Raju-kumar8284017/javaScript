@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+        
+	<title>Text Length count</title>
+</head>
+<body>
+
+	    <nav class="nav bg-success m-5">
+	    	<a href="#" class="nav-link text-white font-weight-bold h1">Text Length count</a>
+	    </nav>
+
+	    <div class="container">
+	    	<div class="card">
+	    		<div class="card-head">
+	    			<h1 class="bg-success text-white font-weight-bold">Text Length count</h1>
+	    			<div class="card-body">
+	    				<div class="input-group">
+	    					<textarea class="form-control" id="text" maxlength="100"></textarea>
+	    				</div>
+	    				<div class="card-footer bg-light font-weight-bold">
+	    					 <h3>charactor count : <span class="text-success" id="count">0</span>/100</h3>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+
+<script type="text/javascript">
+	   
+		let textbox = document.querySelector('#text');
+
+		let count = document.querySelector('#count');
+
+		textbox.addEventListener('keyup', function () {
+			  
+			   let num = textbox.value.length;
+
+			   count.innerText = num; 
+		});
+
+
+</script>
+
+</body>
+</html>

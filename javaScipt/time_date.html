@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	 <!------------------------------------bootstrap.css------------------------------------>
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/bootstrap.css">
+
+  <!-----------------------------------mdb.css------------------------------------------->
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/mdb.css">
+
+ <!------------------------------------style.css----------------------------------------->
+
+     <link rel="stylesheet" type="text/css" href="mdbootstrap/css/style.css">
+   
+ <!------------------------------------jquery.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/jquery-3.3.1.min.js"></script>
+
+  <!------------------------------------popper.js----------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/popper.min.js"></script>
+
+  <!-----------------------------------bootstrap.js--------------------------------------->
+
+      <script type="text/javascript" src="mdbootstrap/js/bootstrap.js"></script>
+
+
+  <!-------------------------------------mdb.js------------------------------------------->
+      <script type="text/javascript" src="mdbootstrap/js/mdb.js"></script>
+        
+	<title>Text Length count</title>
+</head>
+<body>
+
+	    <nav class="nav bg-success m-5">
+	    	<a href="#" class="nav-link text-white font-weight-bold h1">Text Length count</a>
+	    </nav>
+
+	    <div class="container">
+	    	<div class="card">
+	    		<div class="card-body bg-success text-white text-center">
+	    			  <h5>Asia/Kolkata</h5>
+	    			  <h4 class="display-4">india</h4>
+	    			  <p id="indian-date">25/04/2024</p>
+	    			  <h1 id="indian-time" class="display-6" id="time">10:00:00 pm</h1>
+	    		</div>
+	    	</div>
+	    </div>
+
+	    <div class="container">
+	    	<div class="card">
+	    		<div class="card-body bg-success text-white text-center">
+	    			  <h5>Asia/Kolkata</h5>
+	    			  <h4 class="display-4">india</h4>
+	    			  <p id="indian-dateNext">25/04/2024</p>
+	    			  <h1 id="indian-timeNext" class="display-6" id="time">10:00:00 pm</h1>
+	    		</div>
+	    	</div>
+	    </div>
+
+
+
+	    <div class="input-group mb-3">
+  <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+<script type="text/javascript">
+	   
+	   let indiaWatch = function () {
+	   	   
+	   	   let options = { timeZone: 'Asia/Kolkata'};
+
+	   	   let currentDate = new Date().toLocaleDateString('en-us');
+	   	   let currentTime = new Date().toLocaleTimeString('en-us');
+
+	   	   document.querySelector('#indian-date').innerText = currentDate;
+	   	   document.querySelector('#indian-time').innerText = currentTime;
+	   };
+	     setInterval(indiaWatch, 1000);
+/*-------------------------------------------------------------------------------------*/
+
+	     let indiaWatchNext = function () {
+	   	   
+	   	   let options = { timeZone: 'Asia/Kolkata'};
+
+	   	   let currentDate = new Date().toLocaleDateString('en-us');
+	   	   let currentTime = new Date().toLocaleTimeString('en-us');
+
+	   	   let NextDate = currentDate 
+	   	   let NextTime = currentTime++
+
+	   	   document.querySelector('#indian-dateNext').innerText = NextDate;
+	   	   document.querySelector('#indian-timeNext').innerText = NextTime;
+	   };
+	     setInterval(indiaWatchNext, 1000);
+
+		
+</script>
+
+</body>
+</html>
