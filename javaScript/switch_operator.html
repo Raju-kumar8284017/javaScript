@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js switch operator</title>
+    <style type="text/css">
+    	body{
+    		margin: 20px;
+    		padding: 0;
+    	}
+    	nav{
+    		background: greenyellow;
+    	}
+    	a{
+    		text-decoration: none;
+    		font-size: 50px;
+    		font-weight: bold;
+    		margin: 15px;
+    	}
+    </style>
+	
+</head>
+<body>
+        <nav>
+        	<a href="#">js switch operator</a>
+        </nav>
+
+            
+
+    <script type="text/javascript">
+    	   let day = 10;
+
+    	   switch (day){
+    	   case 1: 
+    	   	document.write("today is monday");
+    	     break;
+    	    case 2: 
+    	    	document.write("today is tuesday");
+    	     break;
+    	    case 3: 
+    	    	document.write("today is wednesday");
+    	     break;
+    	    case 4: 
+    	    	document.write("today is thrusday");
+    	     break;
+    	    case 5: 
+    	    	document.write("today is friday");
+    	     break;
+    	    case 6: 
+    	    	document.write("today is saturday");
+    	     break;
+    	    case 7: 
+    	    	document.write("(today is sunday");
+    	     break;
+
+    	  default: 
+    	  	document.write("enter valid day ");
+
+    	   }
+
+    	   document.write("<br>");
+
+    	   let age = 35;
+
+    	   switch(true){
+    	   case (age > 18 && age < 30):
+    	   	document.write("you are eligible");
+    	   break;
+
+    	   case (age > 0 && age < 18):
+    	   	document.write("you are not eligible");
+    	   break;
+ 	    default:
+ 	    	document.write(" enter valid age ");
+    	   }
+
+
+	</script>
+</body>
+</html>

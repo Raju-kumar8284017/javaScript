@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js Events</title>
+    <style type="text/css">
+    	body{
+    		margin: 20px;
+    		padding: 0;
+
+    	}
+    	nav{
+    		background: greenyellow;
+    	}
+    	a{
+    		text-decoration: none;
+    		font-size: 50px;
+    		font-weight: bold;
+    		margin: 15px;
+    	}
+    	span{
+    		color: red;
+    		margin-left: 30px;
+    	}
+    	li{
+    		margin: 10px;
+    	}
+    	.right{
+    	    margin-left: 600px;
+    	    margin-top: -30rem;	
+    	}
+
+    </style>
+	
+</head>
+<body onresize ="hello()" onscroll="hello()">
+        <nav>
+        	<a href="#">js Events</a>
+        </nav>
+
+           <ul>
+           	<li>clock : <span>(onclick)</span></li>
+           	<li>Double clock : <span>(ondblclick)</span></li>
+           	<li>Right clock : <span>(oncontextmenu)</span></li>
+           	<li>Mouse hover : <span>(onmouseenter)</span></li>
+           	<li>Mouse out : <span>(onmouseout)</span></li>
+           	<li>Mouse Down : <span>(onmousedown)</span></li>
+           	<li>Mouse up : <span>(onmouseup)</span></li>
+           	<li>key press : <span>(onkeypress)</span></li>
+           	<li>Key up : <span>(onkeyup)</span></li>
+           	<li>Load : <span>(onload)</span></li>
+           	<li>Unload : <span>(onunload)</span></li>
+           	<li>Resize : <span>(onresize)</span></li>
+           	<li>Scroll : <span>(onscroll)</span></li>
+           </ul>
+   <!------------------------------------------------------------------------------------>
+      
+         <button onclick="hello()">clock me</button>
+
+         <p ondblclick="doubleclick()">double click</p>
+
+         <h3 oncontextmenu="rightclick()">right click</h3>
+          
+          <h3 onmouseenter="hover()">Mouse hover</h3>  
+
+     <div class="right">
+     	    <h3 onmouseout="mouseout()">Mouse out</h3>
+     	    <h3 onmousedown="mousedown()">mouse down</h3>
+     	    <h3 onmouseup="mouseup()">mouse up</h3>
+     	    <h3 onkeypress="keypress()">key press</h3>
+     	    <h3 onkeyup="keyup()">key up</h3>
+
+
+     	    <h3 onload ="hello()">load</h3>  <!--------during--------for page loading--->
+     	    <h3 onunload="hello()">Unload</h3><!--------during--------for page close--->
+     	    <h3 >Resize</h3>
+     	    <h1 >Scroll</h1>
+     	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     </div>
+
+    <script type="text/javascript">
+     	
+     	   function hello() {
+     	    	  alert("thanks");
+     	    }
+
+     	     function doubleclick() {
+     	    	  alert("doubleclick");
+     	    }
+     	    function rightclick() {
+     	    	alert("rightclick");
+     	    }
+     	    function hover() {
+     	    	alert("hover");
+     	    }
+
+     	     function mouseout() {
+     	    	alert("mouseout");
+     	    }
+     	    function mousedown() {
+     	    	prompt("mousedown");
+     	    }
+     	    function mouseup() {
+     	    	alert("mouseup");
+     	    }
+     	    function keypress() {
+     	    	alert("keypress");
+     	    }
+     	    function keyup() {
+     	    	alert("keyup");
+     	    }
+    	     
+	</script>
+</body>
+</html>

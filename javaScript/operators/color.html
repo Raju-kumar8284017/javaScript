@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>color</title>
+	<style type="text/css">
+		div{
+			height: 100px;
+			width: 100px;
+			border: 2px solid black;
+			display: inline-flex;
+			margin: 20px;
+			
+		}
+	</style>
+</head>
+<body>
+
+	<div id="changecolor"></div>
+
+     <div id="box" onclick="color()"></div>
+
+     <div id="box2" onclick="changecoloe();"></div>
+
+     <div id="box3" onclick="bxclr()"></div>
+     	
+      
+
+     <script type="text/javascript">
+     	   
+
+     		document.getElementById('changecolor').style.backgroundColor = "blue";
+
+/*-----------------------------------------------------------------------------------*/
+
+
+     		function color() {
+     			document.getElementById('box').style.backgroundColor = "red";
+     		};
+
+ /*-----------------------------------------------------------------------------------*/
+ 
+     	     let box = document.getElementById("box2");
+
+
+     	     	 box.style.backgroundColor = "green";
+
+     				
+     				function changecoloe() {
+
+     				  if(box.style.backgroundColor == "green"){
+
+     				  	box.style.backgroundColor = "yellow";
+
+     				  }else if (box.style.backgroundColor == "yellow") {
+     				  	box.style.backgroundColor = "black";
+
+     				  }else if (box.style.backgroundColor == "black") {
+     				  	box.style.backgroundColor = "gray";
+
+     				  }else if (box.style.backgroundColor == "gray") {
+     				  	box.style.backgroundColor = "white";
+
+     				  }else if (box.style.backgroundColor == "white") {
+     				  	box.style.backgroundColor = "green";
+     				  };
+     			  };
+
+     			 
+
+  /*-----------------------------------------------------------------------------------*/
+
+     			  let box3 = document.getElementById('box3');
+
+
+
+                function bxclr() {
+                	box3.style.backgroundColor = "rgb(57,208,100)";
+                }
+
+
+           
+
+     			
+     			 
+
+
+     		
+     	
+     </script>
+</body>
+</html>

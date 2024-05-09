@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>js function</title>
+    <style type="text/css">
+    	body{
+    		margin: 20px;
+    		padding: 0;
+    	}
+    	nav{
+    		background: greenyellow;
+    	}
+    	a{
+    		text-decoration: none;
+    		font-size: 50px;
+    		font-weight: bold;
+    		margin: 15px;
+    	}
+    </style>
+	
+</head>
+<body>
+        <nav>
+        	<a href="#">js function</a>
+        </nav>
+
+    <script type="text/javascript">
+    	 function goTo(){
+    	 	document.write("delhi");
+    	 }
+    	 function come(){
+    	 	document.write("from delhi");
+    	 }
+
+    	 goTo();
+    	 document.write("<br>");
+    	 come();
+    	 document.write("<br>");
+    	 goTo();
+    	 document.write("<br>");
+    	 come();
+    	  document.write("<br>");
+    	   document.write("<br>");
+    	    document.write("<br>");
+    /*---------------------------function with parameter---------------*/
+
+    	 function student(fname, lname) {
+    	 	document.write(`hello ${fname}  ${lname}`);
+    	 }
+    	 student("Raju" ,"kumar");
+    	 document.write("<br>");
+
+    	 student("veer" ,"singh");
+
+    	 document.write("<br>");
+
+    	  /*---------------assign default value------------function with parameter---------------*/
+
+    	 function self(name = "raju", title = "kumar") {
+    	 	document.write(`hello ${name}  ${title}`);
+    	 }
+    	 self("Raju" ,"kumar");
+    	 document.write("<br>");
+
+    	 self("veer" ,"singh");
+
+    	  document.write("<br>");
+
+    	  self("raju");
+
+    	  document.write("<br>");
+
+    	  self();
+
+    	  document.write("<br>");
+
+	  /*---------------math------------function with parameter---------------*/
+
+    	 function sum( a, b ){
+    	 	document.write( a + b);
+    	 }
+    	 sum(10, 30);
+    	 document.write("<br>");
+
+    	 sum(5,5);
+
+    	  document.write("<br>");
+
+    	  sum(100.00,5);
+
+    	  document.write("<br>");
+
+    	  sum(10,101.55);
+
+          document.write("<br>");
+
+    	  /*-----------------------------------return function-----------------------------*/
+
+    	  function fullname(stName  ,  stitle) {
+    	  	let z  = (`${stName}  ${stitle}`);
+
+    	  	return z;
+
+    	  }
+
+
+    	  let fn = fullname("ram", "singh");
+    	   document.write(fn);
+
+    	    document.write("<br>");
+    	   /*--------------------------------------*/
+
+    	   function sub(math , sci , english) {
+    	   	let sumof = (math + sci + english);
+
+    	   	return sumof;
+    	   }
+
+    	    function percentage(tt) {
+    	    	let per = tt/300 * 100;
+    	    	document.write(per);
+    	    }
+
+    	     let total = sub (10,20,30);
+    	    percentage(total);
+
+	</script>
+</body>
+</html>

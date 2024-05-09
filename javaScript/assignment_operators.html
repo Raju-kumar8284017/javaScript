@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>html in js</title>
+    <style type="text/css">
+    	body{
+    		margin: 20px;
+    		padding: 0;
+    	}
+    	nav{
+    		background: greenyellow;
+    	}
+    	a{
+    		text-decoration: none;
+    		font-size: 50px;
+    		font-weight: bold;
+    		margin: 15px;
+    	}
+    </style>
+	
+</head>
+<body>
+        <nav>
+        	<a href="#">html in js</a>
+        </nav>
+
+         <table>
+              <tr>
+        	   <th>Operator</th>
+        	   <th>example</th>
+        	   <th>same as</th>
+              </tr>
+              <tr>
+              	  <td>=</td>
+              	  <td>x = y</td>
+              	  <td>x = y</td>
+              </tr>
+              <tr>
+              	  <td>+=</td>
+              	  <td>x +=y</td>
+              	  <td>x = x + y</td>
+              </tr>
+               <tr>
+              	  <td>-=</td>
+              	  <td>x-=y</td>
+              	  <td>x = x - y</td>
+              </tr>
+              <tr>
+              	  <td>*=</td>
+              	  <td>x*=y</td>
+              	  <td>x = x * y</td>
+              </tr>
+               <tr>
+              	  <td>**=</td>
+              	  <td>x**=y</td>
+              	  <td>x = x ** y</td>
+              </tr>
+              <tr>
+              	  <td>/=</td>
+              	  <td>x /= y</td>
+              	  <td>x = x / y</td>
+              </tr>
+              <tr>
+              	  <td>%=</td>
+              	  <td>x %= y</td>
+              	  <td>x = x % y</td>
+              </tr>
+              
+
+------------------------------------------------------------------------------------
+        </table>
+        -------------------------------------------------------
+
+    <script type="text/javascript">
+    	    /*---------------addition------------------*/
+		document.write("<br>");
+		let a = 10;
+		let b = 5;
+		 a+=b;
+		document.write(a);
+       
+        /*---------------subtraction------------------*/
+		document.write("<br>");
+		let d = 10;
+		let e = 5;
+		d-=e;
+		document.write(e);
+
+	/*---------------multiplication------------------*/
+
+		document.write("<br>");
+		let g = 10;
+		let h = 5;
+		g*=h
+		document.write(g);
+
+	/*---------------exponentiation-----------------*/
+		document.write("<br>");
+		let j = 10;
+		let k = 2;
+		j**=k;   //** means ---10 and 2 ===> ----10* 10 = 100
+		document.write(j);
+
+	/*------------division----------------------*/
+
+		document.write("<br>");
+		let m = 10;
+		let n = 5;
+		m/=n;
+		document.write(n);
+
+	/*------------modulus(remainder)---------------------*/
+
+		document.write("<br>");
+		let p = 15;
+		let q = 2;
+		p%=q;    // here 2*7 =14 and reminder =1 
+		document.write(p); //output = 1
+
+			
+	</script>
+</body>
+</html>

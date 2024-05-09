@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>variables</title>
+    <style type="text/css">
+    	body{
+    		margin-left: 20px;
+    		padding: 0;
+    	}
+    	nav{
+    		background: greenyellow;
+    	}
+    	a{
+    		text-decoration: none;
+    		font-size: 50px;
+    		font-weight: bold;
+    		margin: 15px;
+    	}
+    	div{
+    		margin-left: 20px;
+    	}
+    </style>
+	
+</head>
+<body>
+        <nav>
+        	<a href="#">js variables</a>
+        </nav>
+
+        <p>when we want to print some things in js <br>
+             normally we can go with ====> document.write("hello world") <br>
+             but in multi time required to write this stetment its take much time 
+        </p>
+        <h1>that why we use</h1>
+        <h3>veriables....>>> its helps us to save time and do multi reuseablity  </h3>
+     <div>
+        <h1>types of veriables</h1>
+          a) var <br>
+          b) let  <br>
+          c) const
+      </div>
+    <script type="text/javascript">
+    /*---------------------------------var------------------------------------------------*/
+	 var a = "raju"
+	 document.write(a);	
+       
+	 var b = 30
+	 document.write(b);
+
+	 var c = 30.33
+	 document.write(c);
+
+	 var d = true
+	 document.write(d);
+
+	 var firstName = "raju"
+	 var firstName = "raju"  // in var we can assign declear variable in second time 
+	 firstName = "kumar"
+	 document.write(firstName);
+	 document.write(typeof firstName);
+   
+     /*---------------------------------------let--------------------------------------------*/
+	 let x = "raju"
+	// let x = "kumar"  its get error in this we only one time declear variable
+	 document.write(x);
+
+     /*-------------------------------const--------------------------------------------------*/
+	 /*-----------in const we can't declear variable in second time 
+                  or 
+                  also we cant overwrite it
+	 */
+
+	 	const z = 10;
+	     // const z = 30; its get error
+	     // z = 30;        its get error
+	 	document.write(z);
+    </script>
+</body>
+</html>

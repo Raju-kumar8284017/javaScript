@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Addition</title>
+
+
+	<style type="text/css">
+		#sum{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			font-size: 50px;
+			font-weight: bold;
+		}
+		div{
+			font-size: 50px;
+			font-weight: bold;
+			margin-left: 200px;
+		}
+	</style>
+</head>
+<body>
+
+		<div id="sum"></div>
+		<div id="sum1"></div>
+		<div id="sum2"></div>
+</body>
+
+<script type="text/javascript">
+	let a = 10;
+	let b = 20;
+	let c = a + b;
+	document.getElementById('sum').innerHTML = `sum of ${a} and ${b}: = ${c}`;
+
+/*---------------------------------------------------*/
+
+	 let sum = a + b;
+	 a = 10;
+	 b = 100;
+	 document.getElementById('sum1').innerHTML = sum;
+
+	 /*----------------------------------*/
+	 
+	 let l = 40;
+	 let w = 20;
+	 let g = 5;
+	 let x = (l  + w )* g;
+	// console.log(x);
+	 document.getElementById('sum2').innerHTML = x;
+
+	 
+</script>
+</html>

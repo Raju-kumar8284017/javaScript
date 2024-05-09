@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>html in js</title>
+    <style type="text/css">
+    	body{
+    		margin: 20px;
+    		
+    	}
+    	nav{
+    		background: greenyellow;
+    	}
+    	a{
+    		text-decoration: none;
+    		font-size: 50px;
+    		font-weight: bold;
+    		margin: 15px;
+    	}
+    </style>
+	
+</head>
+<body>
+        <nav>
+        	<a href="#">html in js</a>
+        </nav>
+         <h1><u>string</u></h1>
+        <h2>var x = "hello world"; ---------------------------------(string)</h2>
+        <h1><u>number</u></h1>
+        <h2>var x = 35  / 35.05; ---------------------------------(number)</h2>
+        <h1><u>boolean</u></h1>
+        <h2>var x = true / false; ---------------------------------(boolean)</h2>
+         <h1><u>array</u></h1>
+        <h2>var x = ["html", "css", "js"]; ---------------------------------(array)</h2>
+        <h1><u>object</u></h1>
+        <h2>var x = {firstName:"raju", lastName:"kumar"}; ---------------------------------(object)</h2>
+        <h1><u>undefine</u></h1>
+        <h2>var x ; ---------------------------------(undefine)</h2>
+        <h1><u>null</u></h1>
+        <h2>var x = null; ---------------------------------(null)</h2>
+
+    <script type="text/javascript">
+    	 /*--------string-------------*/
+    	  let firstName = "raju"
+
+    	  document.write(firstName);
+    	  document.write("<br>");
+    	  document.write(typeof firstName);
+    	  document.write("<br>");
+    	 /*-------------------number---------------*/
+    	  let x = 10
+    	  let  y =150.15
+    	  document.write(x);
+    	  document.write("<br>");
+    	  document.write(typeof x);
+    	  document.write("<br>");
+	  document.write(y);
+	  document.write("<br>");
+	  document.write(typeof y);
+	  document.write("<br>");
+
+	 /*-------------------boolean-------------*/
+	  let a = true;
+	  let b = false;
+	  document.write(a);
+	   document.write("<br>");
+	   document.write(typeof a);
+	    document.write("<br>");
+	   document.write(b);
+	   document.write("<br>");
+	   document.write(typeof b);
+	   document.write("<br>");
+
+	 /*-----------------array----------------*/
+	   let h = ["html", "css", "js"]
+
+	   document.write(h);
+	   document.write("<br>");
+	   document.write(typeof h);  //here array is also called object type data 
+	   document.write("<br>");
+
+	   /*-----------------object------------*/
+
+	   let i = {name:"raju", last:"kumar"};
+
+	   document.write(i.name+" "+ i.last);
+	   document.write("<br>");
+	   document.write(typeof i);
+	   document.write("<br>");
+          /*-------------undefine--------------*/
+
+	   let e;
+	   document.write(e);
+	   document.write("<br>");
+	   document.write(typeof e);
+	   document.write("<br>");
+
+	  /*--------------null-------------------*/
+
+	   let f = null;
+	   document.write(f);
+	   document.write("<br>");
+	   document.write(typeof f);
+	</script>
+</body>
+</html>
