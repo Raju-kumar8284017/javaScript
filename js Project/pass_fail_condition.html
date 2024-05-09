@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass & fail condition</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        input{
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 20px;
+        }
+        h3{
+            height: 70px;
+            width: 250px;
+            border: 2px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+     <div>
+        <form action="" method="get">
+            <input type="text" id="myinput";>
+            <h3 id="output">your result</h3>
+            <hr>
+            <button id="btn" onclick="marks()">Result</button>
+        </form>
+     </div>
+
+     <script>
+        
+        
+
+        function marks() {
+            let t_marks = document.getElementById('myinput').value;
+            if (t_marks >= 300 ) {
+                   document.getElementById('output').innerHTML = "you are getting 1st division"; 
+            }else if ( t_marks >= 200  && t_marks < 300) {
+                   document.getElementById('output').innerHTML = "you are getting 2st division"; 
+            }else if (t_marks >= 100  && t_marks < 200) {
+                    document.getElementById('output').innerHTML ="you are getting 3st division"; 
+            }else if (t_marks < 100)  {
+                   document.getElementById('output').innerHTML ="sorry";
+            }
+                
+        }
+
+          
+     </script>
+
+
+</body>
+</html>

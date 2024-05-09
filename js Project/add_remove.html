@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>add</title>
+</head>
+<body>
+		<div class="wrapper">
+			<div id="survay_options">
+				<input type="text" name="survay_options[]" class="survay_options" placeholder="name">
+			</div>
+			<div class="control">
+				<button id="addmore">add</button>
+				<button id="remove">remove</button>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			
+			let surveyOptions = document.querySelector('#survay_options');
+			let add = document.querySelector('#addmore');
+			let remove = document.querySelector('#remove');
+
+			add.addEventListener('click',function () {
+				let newfield = document.createElement('input');
+				   newfield.type = 'text';
+				   newfield.placeholder = 'name';
+
+				  surveyOptions.appendChild(newfield);
+            })
+				remove.addEventListener('click', function () {
+					 let addfield = surveyOptions.getElementsByTagName('input');
+					 if (addfield.length > 2) {
+					 	surveyOptions.removeChild(addfield[(addfield.length)-1]);
+					 }
+				})
+             
+		</script>
+</body>
+</html>
